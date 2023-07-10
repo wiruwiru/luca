@@ -1,0 +1,39 @@
+{
+    "name": "launcher-honeymc",
+    "preductname": "HoneyMC Launcher",
+    "version": "1.0.0",
+    "description": "Launcher para poder jugar en HoneyMC",
+    "main": "src/app.js",
+    "author": "Luca.",
+    "url": "https://honeymc.es/",
+    "engines": {
+        "node": "^18.x.x"
+    },
+    "scripts": {
+        "start": "cross-env-shell NODE_ENV=dev electron .",
+        "build": "node build.js --build",
+        "icon": "node build.js --icon=https://raw.githubusercontent.com/wiruwiru/luca/main/src/assets/images/icon.png?token=GHSAT0AAAAAACB4AXRKZYWW7LWLLFS4EMZYZFLCSZQ",
+        "dev": "nodemon --exec npm start"
+    },
+    "license": "CC0",
+    "nodemonConfig": {
+        "ext": "js,html,css"
+    },
+    "dependencies": {
+        "electron-updater": "^5.0.1",
+        "jimp": "^0.22.8",
+        "minecraft-java-core": "^3.5.0",
+        "node-fetch": "^2.6.7",
+        "png2icons": "^2.0.1"
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.3",
+        "electron": "^20.0.0",
+        "electron-builder": "^23.0.3",
+        "nodemon": "^2.0.16"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wiruwiru/luca.git"
+    }
+}
