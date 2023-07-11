@@ -173,7 +173,7 @@ class Home {
                 if (launcherSettings.launcher.close === 'close-launcher') ipcRenderer.send("main-window-hide");
                 ipcRenderer.send('main-window-progress-reset')
                 progressBar.style.display = "none"
-                info.innerHTML = `Juego en curso...`
+                info.innerHTML = `En curso..`
                 console.log(e);
             })
 
