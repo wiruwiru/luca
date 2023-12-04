@@ -12,6 +12,7 @@ body {
     padding: 0;
     user-select: none;
     background: linear-gradient(#00000066, #00000066), url("../images/background/light.jpg") black no-repeat center center scroll;
+    background-size: 100%;
 }
 
 img {

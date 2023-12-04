@@ -206,7 +206,7 @@ class Login {
 
 
             if (mailInput.value == "") {
-                infoLogin.innerHTML = "Introduzca su correo electrónico / nombre de usuario"
+                infoLogin.innerHTML = "Introduzca su nombre de usuario"
                 cancelMojangBtn.disabled = false;
                 loginBtn.disabled = false;
                 mailInput.disabled = false;

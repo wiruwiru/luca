@@ -1,5 +1,5 @@
 # module du helios launcher
-name: HoneyMC
+name: RedAge
 on:
   push:
     branches: [ main ]

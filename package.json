@@ -1,11 +1,11 @@
 {
-    "name": "launcher-honeymc",
-    "preductname": "HoneyMC Launcher",
-    "version": "1.0.1",
-    "description": "Launcher para poder jugar en HoneyMC",
+    "name": "launcher-redage",
+    "preductname": "RedAge",
+    "version": "1.0.2",
+    "description": "Launcher dedicado actualmente a la version 1.20.2",
     "main": "src/app.js",
     "author": "Luca.",
-    "url": "https://honeymc.es/",
+    "url": "https://redage.es/",
     "engines": {
         "node": "^18.x.x"
     },
@@ -22,7 +22,7 @@
     "dependencies": {
         "electron-updater": "^5.0.1",
         "jimp": "^0.22.8",
-        "minecraft-java-core": "^3.5.0",
+        "minecraft-java-core": "3.7",
         "node-fetch": "^2.6.7",
         "png2icons": "^2.0.1"
     },
