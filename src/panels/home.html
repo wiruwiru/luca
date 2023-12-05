@@ -16,8 +16,8 @@
         <div class="news-list">
             <div class="news-novedad">
             <h1 style="color:white;">¡Ultimas noticias!</h1>
-            <h3 style="color:white;opacity: 80%;">¡Bienvenidos a la comunidad de RedAge! Estamos emocionados de presentarte nuestra primera version dedicada a la 1.20.2<br><br> Hemos desarrollado este launcher y cliente para tener el mejor rendimiento posible en la 1.20.2, próximamente traeremos más actualizaciones y mejoras para brindarte la mejor experiencia posible.</h3>
-            <h3 style="color:white;opacity: 80%;">¡Esperamos que te diviertas!</h3>
+            <p style="color:white;opacity: 80%;padding-left: 7px;padding-right: 7px;">¡Bienvenidos a la comunidad de RedAge! Estamos emocionados de presentarte nuestra primera version dedicada a la 1.20.2<br><br> Hemos desarrollado este launcher y cliente para tener el mejor rendimiento posible en la 1.20.2, próximamente traeremos más actualizaciones y mejoras para brindarte la mejor experiencia posible.</p>
+            <p style="color:white;opacity: 80%;">¡Esperamos que te diviertas!</p>
             </div>
         </div>
         <div class="info-list">
@@ -34,6 +34,16 @@
                     </div>
                 </div>
             </div>
+            <div class="info-item" onclick="ipcRenderer.send('open-external-link', 'https://redage.es');">
+                <h1></h1>
+                <div class="server">
+                    <img class="website-img" src="assets/images/website.png"/>
+                    <div class="server-text">
+                        <div class="name">Sitio web</div>
+                        <div class="desc"><span class="red">Visita nuestro sitio web</span></div>
+                    </div>
+                </div>
+            </div>            
         </div>
     </div>
 </div>

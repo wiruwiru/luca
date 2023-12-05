@@ -1,7 +1,7 @@
 {
     "name": "launcher-redage",
     "preductname": "RedAge",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Launcher dedicado actualmente a la version 1.20.2 de minecraft",
     "main": "src/app.js",
     "author": "Luca.",

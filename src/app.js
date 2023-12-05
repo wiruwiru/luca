@@ -1,6 +1,6 @@
-const { app, ipcMain } = require('electron');
+const { app, ipcMain, shell } = require('electron');
 const { Microsoft } = require('minecraft-java-core');
-const { autoUpdater } = require('electron-updater')
+const { autoUpdater } = require('electron-updater');
 
 const path = require('path');
 const fs = require('fs');
@@ -8,7 +8,7 @@ const fs = require('fs');
 const UpdateWindow = require("./assets/js/windows/updateWindow.js");
 const MainWindow = require("./assets/js/windows/mainWindow.js");
 
-let data
+let data;
 let dev = process.env.NODE_ENV === 'dev';
 
 if (dev) {
@@ -47,7 +47,7 @@ ipcMain.on('main-window-maximize', () => {
 ipcMain.on('main-window-hide', () => MainWindow.getWindow().hide())
 ipcMain.on('main-window-show', () => MainWindow.getWindow().show())
 
-ipcMain.handle('Microsoft-window', async(event, client_id) => {
+ipcMain.handle('Microsoft-window', async (event, client_id) => {
     return await new Microsoft(client_id).getAuth();
 })
 
@@ -55,11 +55,10 @@ app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit();
 });
 
-
 autoUpdater.autoDownload = false;
 
 ipcMain.handle('update-app', () => {
-    return new Promise(async(resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
         autoUpdater.checkForUpdates().then(() => {
             resolve();
         }).catch(error => {
@@ -93,3 +92,8 @@ autoUpdater.on('download-progress', (progress) => {
     const updateWindow = UpdateWindow.getWindow();
     if (updateWindow) updateWindow.webContents.send('download-progress', progress);
 })
+
+// Nueva sección para abrir enlaces externos
+ipcMain.on('open-external-link', (event, url) => {
+    shell.openExternal(url);
+});

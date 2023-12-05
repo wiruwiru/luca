@@ -121,6 +121,7 @@
     background-color: #1212129f;
     border-radius: 5px;
     text-align: center;
+    font-family: 'Poppins';
 }
 
 .news-list::-webkit-scrollbar {
@@ -249,6 +250,14 @@
 .server-img {
     position: absolute;
     width: 42px;
+    height: 45px;
+    top: 15px;
+    left: 15px;
+}
+
+.website-img {
+    position: absolute;
+    width: 45px;
     height: 45px;
     top: 15px;
     left: 15px;
